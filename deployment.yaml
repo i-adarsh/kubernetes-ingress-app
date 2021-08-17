@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: revving
+  name: revving
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: revving
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: revving
+    spec:
+      containers:
+      - image: iadarshkr/revvingstatic
+        name: revving
+        resources: {}
+status: {}
